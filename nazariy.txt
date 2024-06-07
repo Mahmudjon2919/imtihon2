@@ -1,0 +1,7 @@
+1.   INNER Join: faqat ikkita jadvaldagi mos qiymatlarni qaytaradi.
+LEFT Join: O'ng bilan chap jadvaldagi mos qiymatlarni qaytaradi. Chap jadvalga  mos kelmaganda qiymatlari  NUll bilan to'ldiradi
+RIGHT left ning aksi bo'ladi.
+FULL OUTER Join:Ikkala jadvalning barcha satrlarini,  mos kelmaydigan jadvalning mos ustunlaridagi NULL qiymatlari bilan mos kelmaydigan yozuvlarni birlashtiradi.
+SELECT students.student_id, students.name, courses.course_name
+FROM students
+FULL OUTER JOIN courses ON students.enrolled_course_id = courses.course_id;

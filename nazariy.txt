@@ -5,3 +5,27 @@ FULL OUTER Join:Ikkala jadvalning barcha satrlarini,  mos kelmaydigan jadvalning
 SELECT students.student_id, students.name, courses.course_name
 FROM students
 FULL OUTER JOIN courses ON students.enrolled_course_id = courses.course_id;
+2.    ALTER TABLE  jadvalning tuzilishini o'zgartirish uchun ishlatiladi.  ustunlarni qo'shish, o'chirish yoki o'zgartirishda foydalaniladi.
+Yangi column qo'shish:ALTER TABLE customers
+                      ADD city varchar(50);
+Column nomlarini o'zgartirish:ALTER TABLE table_name
+RENAME COLUMN old_column_name TO new_column_name;
+Jadvaldan columni olib tashlash:ALTER TABLE customers
+                                DROP COLUMN city;
+3.    Jadvallar o'rtasida munosabat o'rnatishda yordamchi vazifasini bajaradi. Ular bir-biri bilan bog'langan jadval
+dagi malumotlarni bir xilligini taminlab beradi.
+Primary Key:jadvaldagi har bir satrni yagona identifikatsiya qiluvchi ustun yoki ustunlar to'plami.
+Foreign Key:boshqa jadvalning asosiy kalitiga havola qiluvchi bir jadvaldagi ustun yoki ustunlar to'plami
+Relationship larning aloqa turlari:
+One-to-one:bir jadvaldagi bitta yozuvga boshqa jadvalda bitta yozuv mos keladi.
+One-to-many:bir jadvaldagi bitta yozuvga boshqa jadvalda bir nechta yozuvlar mos keladi.
+Many-to-many:bir jadvaldagi bir nechta yozuvlar boshqa jadvaldagi bir nechta yozuvlar bilan mos keladi.
+4.    1)Foydalanuvchi so'rov qiladi : Foydalanuvchi o'z brauzerida URL manzilini kiritadi
+        yoki Django veb-serveriga so'rov yuboradigan havolani bosadi.
+ 2)URL marshrutlash : Djangoning URL dispetcheri so'rovni qaysi ko'rish funksiyasi bajarishi kerakligini aniqlash uchun so'rovdagi URLni tekshiradi.
+ 3)Ko'rishni qayta ishlash : Ko'rish funktsiyasi so'rovni qayta ishlaydi. U ma'lumotlar bazasi bilan o'zaro ta'sir qilishi,
+ ba'zi hisob-kitoblarni amalga oshirishi yoki javob uchun ma'lumotlarni tayyorlashi mumkin.
+ 4)Javob ishlab chiqarish : so'rovni qayta ishlashdan so'ng, ko'rish funktsiyasi odatda HTTP javobini qaytaradi.
+ Bu javob veb-sahifa, JSON ma'lumotlari, rasm yoki boshqa turdagi kontent bo'lishi mumkin.
+ 5)Foydalanuvchiga yuborilgan javob : Koʻrinish tomonidan yaratilgan HTTP javobi foydalanuvchining brauzeriga qaytariladi,
+ soʻngra u kontentni foydalanuvchi koʻrishi uchun koʻrsatadi.
